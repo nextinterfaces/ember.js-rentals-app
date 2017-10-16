@@ -7,6 +7,7 @@ test('visiting /', function(assert) {
   visit('/');
   andThen(function() {
     assert.equal(currentURL(), '/');
+    assert.equal(find('.listing').length, 3, 'should see 3 listings');
   });
 });
 // test('visiting /list-rentals', function(assert) {
